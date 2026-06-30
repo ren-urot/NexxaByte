@@ -64,7 +64,7 @@
 }
 
 @media (max-width: 860px) {
-  .header-cta { display: none; }
+  .header-inner .header-cta { display: none; }
 
   .nav-toggle { display: flex; }
 
