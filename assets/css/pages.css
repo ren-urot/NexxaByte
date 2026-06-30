@@ -1,0 +1,126 @@
+/* Hero */
+.hero {
+  padding: 64px 0 96px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hero-lead {
+  font-size: 1.1rem;
+  max-width: 480px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-media {
+  position: relative;
+}
+
+.hero-blob {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--color-primary), transparent 70%);
+  opacity: 0.35;
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.hero-photo {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+}
+
+@media (max-width: 960px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-photo { height: 320px; }
+}
+
+/* Services preview */
+.services-preview-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Why choose us */
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 8px 0;
+}
+
+.feature-check {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 78, 0, 0.12);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-check svg {
+  width: 16px;
+  height: 16px;
+}
+
+.feature-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Mission teaser band */
+.mission-teaser {
+  max-width: 720px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.mission-teaser p {
+  font-size: 1.1rem;
+  color: #D8D8D8;
+  margin-bottom: 28px;
+}
+
+/* CTA banner */
+.cta-banner-inner {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.cta-banner-inner .btn {
+  margin-top: 12px;
+}
+
+/* Page hero (About/Services/Contact) */
+.page-hero {
+  padding: 64px 0 32px;
+}
+
+.lead-wide {
+  max-width: 640px;
+  font-size: 1.1rem;
+}
