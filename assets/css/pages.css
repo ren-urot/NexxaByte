@@ -178,3 +178,8 @@
 @media (max-width: 600px) {
   .process-steps { grid-template-columns: 1fr; }
 }
+
+/* Services page groups */
+.group-title {
+  margin-bottom: 32px;
+}
