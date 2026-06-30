@@ -1,0 +1,27 @@
+:root {
+  /* Brand colors */
+  --color-primary: #FF4E00;
+  --color-primary-dark: #D94300;
+  --color-dark: #484848;
+  --color-black: #1A1A1A;
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F6F6F7;
+  --color-bg-dark: #1A1A1A;
+  --color-text: #2B2B2B;
+  --color-text-muted: #6B6B6B;
+  --color-text-on-dark: #F2F2F2;
+  --color-border: #E6E6E6;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Layout */
+  --container-width: 1180px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 12px 28px rgba(0, 0, 0, 0.10);
+  --transition: 200ms ease;
+}
