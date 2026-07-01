@@ -43,6 +43,7 @@
   background-image: url('../images/pattern-diamonds.svg');
   background-repeat: no-repeat;
   background-size: 1980px 990px;
+  background-position: -200px -30px;
   transform: translateY(var(--pattern-offset, 0));
 }
 
