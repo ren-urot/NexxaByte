@@ -87,8 +87,8 @@
   }
 
   function initParallax() {
-    var shapes = document.querySelectorAll('[data-parallax-speed]');
-    if (!shapes.length) return;
+    var hosts = document.querySelectorAll('.parallax-hero, .section-shapes-host');
+    if (!hosts.length) return;
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
@@ -97,10 +97,9 @@
     var ticking = false;
 
     function update() {
-      for (var i = 0; i < shapes.length; i++) {
-        var speed = parseFloat(shapes[i].getAttribute('data-parallax-speed')) || 0;
-        var rect = shapes[i].parentElement.getBoundingClientRect();
-        shapes[i].style.transform = 'translateY(' + (rect.top * speed) + 'px)';
+      for (var i = 0; i < hosts.length; i++) {
+        var rect = hosts[i].getBoundingClientRect();
+        hosts[i].style.setProperty('--pattern-offset', (rect.top * 0.1) + 'px');
       }
       ticking = false;
     }
