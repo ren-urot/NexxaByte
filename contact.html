@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Nexxabyte — Start Your Project</title>
+  <meta name="description" content="Get in touch with Nexxabyte to discuss your software development or technology outsourcing project.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Nexxabyte home">
+        <img src="assets/images/logo.svg" alt="Nexxabyte" class="logo-mark">
+      </a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary btn-sm header-cta">Get a Quote</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="section page-hero">
+      <div class="container">
+        <span class="eyebrow">Contact Us</span>
+        <h1>Let's Start Your Project</h1>
+        <p class="text-muted lead-wide">Tell us about your idea and a member of our team will get back to you shortly.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <form class="card contact-form reveal" id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+            <span class="form-error">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+            <span class="form-error">Please enter a valid email address.</span>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interested In</label>
+            <select id="service" name="service" class="form-control">
+              <option value="">Select a service</option>
+              <option>Custom Software Development</option>
+              <option>Web Application Development</option>
+              <option>Mobile App Development (iOS &amp; Android)</option>
+              <option>SaaS Product Development</option>
+              <option>AI &amp; Automation Solutions</option>
+              <option>UI/UX Design</option>
+              <option>Cloud &amp; DevOps Services</option>
+              <option>Quality Assurance &amp; Testing</option>
+              <option>Software Maintenance &amp; Support</option>
+              <option>Dedicated Development Teams</option>
+              <option>IT Staff Augmentation</option>
+              <option>Technology Consulting</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+            <span class="form-error">Please tell us a bit about your project.</span>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="form-status" role="status"></p>
+        </form>
+
+        <div class="contact-info reveal">
+          <div class="card">
+            <h3>Email Us</h3>
+            <p><a href="mailto:inquiry@nexxabyte.com">inquiry@nexxabyte.com</a></p>
+          </div>
+          <div class="card">
+            <h3>What Happens Next?</h3>
+            <p class="text-muted">We'll review your message and respond within 1-2 business days to schedule a free consultation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/images/logo.svg" alt="Nexxabyte" class="logo-mark">
+        <p>Software development and technology outsourcing for startups, SMEs, and enterprises.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <ul>
+          <li><a href="mailto:inquiry@nexxabyte.com">inquiry@nexxabyte.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Nexxabyte. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

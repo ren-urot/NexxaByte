@@ -47,8 +47,48 @@
     }
   }
 
+  function initContactForm() {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+
+    var status = document.getElementById('form-status');
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function setError(group, hasError) {
+      group.classList.toggle('has-error', hasError);
+    }
+
+    form.addEventListener('submit', function (event) {
+      var valid = true;
+      var requiredFields = form.querySelectorAll('[required]');
+
+      for (var i = 0; i < requiredFields.length; i++) {
+        var field = requiredFields[i];
+        var group = field.closest('.form-group');
+        var fieldValid = field.value.trim().length > 0;
+
+        if (field.type === 'email' && fieldValid) {
+          fieldValid = emailPattern.test(field.value.trim());
+        }
+
+        setError(group, !fieldValid);
+        if (!fieldValid) valid = false;
+      }
+
+      if (!valid) {
+        event.preventDefault();
+        status.textContent = 'Please fix the highlighted fields.';
+        status.className = 'form-status error';
+      } else {
+        status.textContent = 'Sending...';
+        status.className = 'form-status';
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initNavToggle();
     initScrollReveal();
+    initContactForm();
   });
 })();
