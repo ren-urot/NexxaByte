@@ -21,17 +21,7 @@
   z-index: 1;
 }
 
-/* Shared parallax shape base */
-.parallax-shape {
-  position: absolute;
-  pointer-events: none;
-  z-index: 0;
-  width: 220px;
-  height: 220px;
-  will-change: transform;
-}
-
-/* Light-section subtle shape host */
+/* Light-section subtle pattern host */
 .section-shapes-host {
   position: relative;
   overflow: hidden;
@@ -42,33 +32,24 @@
   z-index: 1;
 }
 
-.section-shapes-host .parallax-shape {
-  color: var(--color-dark);
-  opacity: 0.06;
+/* Tiled diamond-pattern background layer, shared by dark heroes and light sections */
+.parallax-hero::before,
+.section-shapes-host::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../images/pattern-diamonds.svg');
+  background-repeat: repeat;
+  background-size: 180px 90px;
+  transform: translateY(var(--pattern-offset, 0));
 }
 
-/* Dark hero/band shapes are lighter and slightly more visible */
-.parallax-hero .parallax-shape,
-.section-dark .parallax-shape {
-  color: #fff;
-  opacity: 0.14;
+.parallax-hero::before {
+  opacity: 0.35;
 }
 
-/* Accent-colored shape variant (must stay last to win over the color rules above) */
-.parallax-shape.is-accent {
-  color: var(--color-primary);
-}
-
-/* Position utility classes */
-.shape-pos-tr { top: -30px; right: -30px; }
-.shape-pos-tl { top: -20px; left: -40px; }
-.shape-pos-br { bottom: -50px; right: 8%; }
-.shape-pos-bl { bottom: -30px; left: -30px; }
-.shape-pos-mid-r { top: 30%; right: -60px; }
-
-.shape-sm { width: 140px; height: 140px; }
-.shape-lg { width: 280px; height: 280px; }
-
-@media (max-width: 768px) {
-  .parallax-shape { display: none; }
+.section-shapes-host::before {
+  opacity: 0.08;
 }
