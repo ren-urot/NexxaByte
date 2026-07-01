@@ -32,21 +32,17 @@
   z-index: 1;
 }
 
-/* Hex-grid background layer, shared by dark heroes and light sections */
+/* Diamond-pattern background layer, shared by dark heroes and light sections */
 .parallax-hero::before,
 .section-shapes-host::before {
   content: '';
   position: absolute;
-  top: -60px;
-  bottom: -60px;
-  left: 0;
-  right: 0;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('../images/pattern-hexgrid.svg');
+  background-image: url('../images/pattern-diamonds.svg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 180px 90px;
   transform: translateY(var(--pattern-offset, 0));
 }
 
