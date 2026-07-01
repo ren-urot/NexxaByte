@@ -41,10 +41,9 @@ assets/images/logo.svg                                      Nexxabyte logo
    in `contact.html`'s info card and in every page's footer. Replace it with
    your real company email (find-and-replace across all 4 HTML files).
 
-3. **Social links:** Commented-out social link placeholders are not yet
-   present in the footer. Add a `<ul class="social-links">` with real
-   LinkedIn/social URLs in the footer's "Get in Touch" column on all 4 pages
-   when available.
+3. **Social links:** No social links are present in the footer yet. Add a
+   `<ul class="social-links">` with real LinkedIn/social URLs in the footer's
+   "Get in Touch" column on all 4 pages when available.
 
 4. **Photography:** Hero (`index.html`) and About (`about.html`) currently
    use placeholder photos from picsum.photos. Replace the `src` attributes
