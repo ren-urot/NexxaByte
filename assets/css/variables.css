@@ -10,7 +10,9 @@
   --color-text: #2B2B2B;
   --color-text-muted: #6B6B6B;
   --color-text-on-dark: #F2F2F2;
+  --color-text-on-dark-muted: #C7C7CC;
   --color-border: #E6E6E6;
+  --color-charcoal-light: #34343A;
 
   /* Typography */
   --font-heading: 'Space Grotesk', sans-serif;
