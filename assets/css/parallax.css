@@ -1,0 +1,74 @@
+/* Parallax dark hero / band base */
+.parallax-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-black), var(--color-charcoal-light));
+  color: #fff;
+}
+
+.parallax-hero p,
+.parallax-hero .text-muted {
+  color: var(--color-text-on-dark-muted);
+}
+
+.parallax-hero h1,
+.parallax-hero h2 {
+  color: #fff;
+}
+
+.parallax-hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Shared parallax shape base */
+.parallax-shape {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  width: 220px;
+  height: 220px;
+  will-change: transform;
+}
+
+/* Light-section subtle shape host */
+.section-shapes-host {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-shapes-host > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-shapes-host .parallax-shape {
+  color: var(--color-dark);
+  opacity: 0.06;
+}
+
+/* Dark hero/band shapes are lighter and slightly more visible */
+.parallax-hero .parallax-shape,
+.section-dark .parallax-shape {
+  color: #fff;
+  opacity: 0.14;
+}
+
+/* Accent-colored shape variant (must stay last to win over the color rules above) */
+.parallax-shape.is-accent {
+  color: var(--color-primary);
+}
+
+/* Position utility classes */
+.shape-pos-tr { top: -30px; right: -30px; }
+.shape-pos-tl { top: -20px; left: -40px; }
+.shape-pos-br { bottom: -50px; right: 8%; }
+.shape-pos-bl { bottom: -30px; left: -30px; }
+.shape-pos-mid-r { top: 30%; right: -60px; }
+
+.shape-sm { width: 140px; height: 140px; }
+.shape-lg { width: 280px; height: 280px; }
+
+@media (max-width: 768px) {
+  .parallax-shape { display: none; }
+}

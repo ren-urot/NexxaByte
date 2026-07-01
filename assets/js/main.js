@@ -86,9 +86,41 @@
     });
   }
 
+  function initParallax() {
+    var shapes = document.querySelectorAll('[data-parallax-speed]');
+    if (!shapes.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return;
+    }
+
+    var ticking = false;
+
+    function update() {
+      for (var i = 0; i < shapes.length; i++) {
+        var speed = parseFloat(shapes[i].getAttribute('data-parallax-speed')) || 0;
+        var rect = shapes[i].parentElement.getBoundingClientRect();
+        shapes[i].style.transform = 'translateY(' + (rect.top * speed) + 'px)';
+      }
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (!ticking) {
+        window.requestAnimationFrame(update);
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    update();
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initNavToggle();
     initScrollReveal();
     initContactForm();
+    initParallax();
   });
 })();
