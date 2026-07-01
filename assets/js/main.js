@@ -99,7 +99,9 @@
     function update() {
       for (var i = 0; i < hosts.length; i++) {
         var rect = hosts[i].getBoundingClientRect();
-        hosts[i].style.setProperty('--pattern-offset', (rect.top * 0.1) + 'px');
+        var offset = rect.top * 0.1;
+        offset = Math.max(-50, Math.min(50, offset));
+        hosts[i].style.setProperty('--pattern-offset', offset + 'px');
       }
       ticking = false;
     }
