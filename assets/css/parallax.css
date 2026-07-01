@@ -53,3 +53,10 @@
 .section-shapes-host::before {
   opacity: 0.08;
 }
+
+/* Dark sections (solid black background) need the same visible tier as
+   .parallax-hero — opacity here is about background luminance, not which
+   structural class the section happens to carry. */
+.section-dark.section-shapes-host::before {
+  opacity: 0.35;
+}

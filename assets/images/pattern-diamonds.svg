@@ -822,10 +822,6 @@
         opacity: .3;
       }
 
-      .st204 {
-        fill: #fff;
-      }
-
       .st205 {
         fill: #e6e7e8;
       }
