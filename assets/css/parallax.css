@@ -32,7 +32,7 @@
   z-index: 1;
 }
 
-/* Tiled diamond-pattern background layer, shared by dark heroes and light sections */
+/* Hex-grid background layer, shared by dark heroes and light sections */
 .parallax-hero::before,
 .section-shapes-host::before {
   content: '';
