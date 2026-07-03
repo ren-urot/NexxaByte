@@ -14,11 +14,18 @@
   justify-content: space-between;
   height: 76px;
   gap: 24px;
+  position: relative;
 }
 
 .logo-mark {
   height: 28px;
   width: auto;
+}
+
+.main-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .main-nav ul {

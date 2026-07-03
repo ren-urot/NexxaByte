@@ -44,6 +44,7 @@
   background-repeat: no-repeat;
   background-size: 1980px 990px;
   background-position: -300px -35px;
+  transform: translateY(var(--pattern-offset, 0));
 }
 
 .parallax-hero::before {
