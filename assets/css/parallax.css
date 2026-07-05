@@ -61,3 +61,22 @@
 .section-dark.section-shapes-host::before {
   opacity: 0.35;
 }
+
+/* Homepage hero pattern entrance: fades and scales in on load, then hands
+   off cleanly to the plain translateY parallax rule above (toggled via JS
+   so the animation's end state never permanently overrides scroll-driven
+   transform updates). */
+@keyframes pattern-form-in {
+  from {
+    opacity: 0;
+    transform: scale(0.85) translateY(var(--pattern-offset, 0));
+  }
+  to {
+    opacity: 0.35;
+    transform: scale(1) translateY(var(--pattern-offset, 0));
+  }
+}
+
+.hero.parallax-hero.pattern-entrance::before {
+  animation: pattern-form-in 900ms ease-out;
+}
