@@ -32,7 +32,8 @@
   z-index: 1;
 }
 
-/* Diamond-pattern background layer, shared by dark heroes and light sections */
+/* Hex-grid pattern layer, shared by dark heroes and light sections. Static
+   tiled texture — no continuous animation. */
 .parallax-hero::before,
 .section-shapes-host::before {
   content: '';
@@ -40,10 +41,9 @@
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background-image: url('../images/pattern-diamonds.svg');
-  background-repeat: no-repeat;
-  background-size: 1980px 990px;
-  background-position: -300px -35px;
+  background-image: url('../images/pattern.svg');
+  background-repeat: repeat;
+  background-size: 220px 220px;
   transform: translateY(var(--pattern-offset, 0));
 }
 
