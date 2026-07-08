@@ -191,3 +191,33 @@
   40% { transform: rotate(-3deg); }
 }
 #float-icon { transform-origin: 500px 150px; animation: icon-rotate 9s infinite; }
+
+/* Collaboration phase (40% -> 57.8%) */
+#collab-line { animation-delay: -0.4s; } /* draws during 40%-57.8% window via draw-path keyframe */
+
+@keyframes avatar-pop {
+  0%, 40%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
+  57.8%, 94.4% { opacity: 1; transform: scale(1); }
+}
+#avatar-a { transform-origin: 70px 110px; animation: avatar-pop 9s infinite; }
+#avatar-b { transform-origin: 490px 340px; animation: avatar-pop 9s infinite; animation-delay: -0.1s; }
+
+@keyframes bubble-slide {
+  0%, 42%, 100% { opacity: 0; transform: translateY(16px); }
+  50%, 94.4% { opacity: 1; transform: translateY(0); }
+}
+#chat-bubble { animation: bubble-slide 9s infinite; }
+
+@keyframes badge-pop {
+  0%, 44%, 100% { opacity: 0; transform: scale(0); }
+  52% { animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
+  56%, 94.4% { opacity: 1; transform: scale(1); }
+}
+#badge { transform-origin: 430px 72px; animation: badge-pop 9s infinite; }
+
+@keyframes ghost-fade {
+  0%, 46%, 57.8%, 100% { opacity: 0; }
+  52% { opacity: 0.35; }
+}
+#ghost-card { animation: ghost-fade 9s infinite; }
