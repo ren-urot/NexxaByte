@@ -156,3 +156,38 @@
 #bar-2 { transform-origin: 244px 296px; animation: bar-grow 9s infinite; animation-delay: -0.36s; }
 #bar-3 { transform-origin: 274px 296px; animation: bar-grow 9s infinite; animation-delay: -0.4s; }
 #bar-4 { transform-origin: 304px 296px; animation: bar-grow 9s infinite; animation-delay: -0.44s; }
+
+/* UX flow phase (24.4% -> 40%) */
+@keyframes draw-path {
+  0%, 24.4%, 100% { stroke-dashoffset: var(--path-length); }
+  40%, 94.4% { stroke-dashoffset: 0; }
+}
+.draw-path { animation: draw-path 9s infinite; }
+#path-b { animation-delay: -0.15s; }
+
+@keyframes node-pop {
+  0%, 24.4%, 100% { opacity: 0; transform: scale(0.4); }
+  40%, 94.4% { opacity: 1; transform: scale(1); }
+}
+#node-1 { transform-origin: 420px 110px; animation: node-pop 9s infinite; }
+#node-2 { transform-origin: 280px 150px; animation: node-pop 9s infinite; animation-delay: -0.08s; }
+#node-3 { transform-origin: 150px 210px; animation: node-pop 9s infinite; animation-delay: -0.16s; }
+
+@keyframes travel-dot-move {
+  0%, 24.4%, 100% { opacity: 0; transform: translate(0, 0); }
+  27% { opacity: 1; }
+  30% { transform: translate(-44px, 34px); }
+  33% { transform: translate(-134px, 54px); }
+  36% { transform: translate(-214px, 79px); }
+  40%, 94.4% { opacity: 0; transform: translate(-264px, 100px); }
+}
+#travel-dot { animation: travel-dot-move 9s infinite; }
+
+@keyframes icon-rotate {
+  0%, 24.4%, 100% { opacity: 0; transform: rotate(0deg); }
+  30%, 94.4% { opacity: 1; }
+  32% { transform: rotate(-5deg); }
+  36% { transform: rotate(5deg); }
+  40% { transform: rotate(-3deg); }
+}
+#float-icon { transform-origin: 500px 150px; animation: icon-rotate 9s infinite; }
