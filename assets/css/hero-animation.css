@@ -1,0 +1,77 @@
+/* Homepage hero: two-column layout + static scene styling.
+   Animation keyframes are added in later tasks. */
+
+.hero-loop {
+  padding: 64px 0 96px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-black), var(--color-charcoal-light));
+  color: #fff;
+}
+
+.hero-loop .hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+  max-width: none;
+  text-align: left;
+}
+
+.hero-loop .hero-content {
+  text-align: left;
+}
+
+.hero-loop .hero-lead {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-loop .hero-actions {
+  justify-content: flex-start;
+}
+
+.hero-loop p,
+.hero-loop .text-muted {
+  color: var(--color-text-on-dark-muted);
+}
+
+.hero-loop h1 {
+  color: #fff;
+}
+
+.hero-visual {
+  position: relative;
+  width: 100%;
+}
+
+.hero-visual svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .hero-loop .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-loop .hero-content {
+    text-align: center;
+  }
+
+  .hero-loop .hero-lead {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-loop .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    display: none;
+  }
+}
