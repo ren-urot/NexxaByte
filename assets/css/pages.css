@@ -24,6 +24,10 @@
   justify-content: center;
 }
 
+.hero-actions .btn {
+  min-width: 236px;
+}
+
 /* Services preview */
 .services-preview-cta {
   text-align: center;
