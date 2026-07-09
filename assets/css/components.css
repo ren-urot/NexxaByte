@@ -318,6 +318,10 @@
   border-color: var(--color-primary);
 }
 
+select.form-control {
+  padding-right: 21px;
+}
+
 .form-error {
   color: var(--color-primary);
   font-size: 0.85rem;
