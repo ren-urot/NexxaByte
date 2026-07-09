@@ -48,8 +48,24 @@
 }
 
 .parallax-hero::before {
-  opacity: 0.6;
+  opacity: 0.3;
   background-position: calc(50% - 400px) center;
+}
+
+/* Mirrored copy of the same pattern, flipped to balance the right side —
+   matches the treatment on the "Our Mission" section. */
+.parallax-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../images/pattern.svg');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 400px) center;
+  background-size: cover;
+  opacity: 0.3;
+  transform: scaleX(-1) scaleY(-1);
 }
 
 .section-shapes-host::before {
