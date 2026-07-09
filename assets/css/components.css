@@ -43,7 +43,7 @@
 
 .main-nav ul {
   display: flex;
-  gap: 32px;
+  gap: 50px;
 }
 
 .main-nav a {
