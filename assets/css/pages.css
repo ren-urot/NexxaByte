@@ -190,6 +190,10 @@
   .contact-grid { grid-template-columns: 1fr; }
 }
 
+#services-preview {
+  background: var(--color-bg-alt);
+}
+
 #services-preview .section-head {
   max-width: 800px;
 }
