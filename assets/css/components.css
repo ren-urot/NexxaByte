@@ -207,7 +207,7 @@
 .card-icon {
   width: 48px;
   height: 48px;
-  border-radius: var(--radius-sm);
+  border-radius: 50%;
   background: var(--color-primary);
   color: #fff;
   display: flex;
