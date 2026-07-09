@@ -42,9 +42,9 @@
   z-index: 0;
   pointer-events: none;
   background-image: url('../images/pattern.svg');
-  background-repeat: repeat;
-  background-size: 220px 220px;
-  transform: translateY(var(--pattern-offset, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .parallax-hero::before {

@@ -86,7 +86,8 @@
 
 /* Page hero (About/Services/Contact) */
 .page-hero {
-  padding: 64px 0 32px;
+  margin-top: -77px;
+  padding: 141px 0 32px;
 }
 
 .lead-wide {
@@ -177,4 +178,8 @@
 
 @media (max-width: 860px) {
   .contact-grid { grid-template-columns: 1fr; }
+}
+
+#services-preview .section-head {
+  max-width: 680px;
 }

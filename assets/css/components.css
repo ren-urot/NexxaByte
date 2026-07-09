@@ -3,9 +3,16 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  background: transparent;
+  backdrop-filter: none;
+  border-bottom: 1px solid transparent;
+  transition: background 200ms ease, backdrop-filter 200ms ease, border-color 200ms ease;
+}
+
+.site-header.is-scrolled {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom-color: var(--color-border);
 }
 
 .header-inner {
@@ -20,6 +27,12 @@
 .logo-mark {
   height: 28px;
   width: auto;
+  filter: brightness(0) invert(1);
+  transition: filter 200ms ease;
+}
+
+.site-header.is-scrolled .logo-mark {
+  filter: none;
 }
 
 .main-nav {
@@ -38,6 +51,17 @@
   font-size: 0.95rem;
   color: var(--color-dark);
   padding: 4px 0;
+  transition: color 200ms ease;
+}
+
+/* The transparent-header effect only applies at desktop widths, where nav
+   links sit directly in the header row over the hero. Below 861px the
+   links move into an always-white dropdown panel (see the mobile nav
+   rules further down), so they must stay dark regardless of scroll. */
+@media (min-width: 861px) {
+  .site-header:not(.is-scrolled) .main-nav a {
+    color: #fff;
+  }
 }
 
 .main-nav a.active,
@@ -80,6 +104,7 @@
     top: 76px;
     left: 0;
     right: 0;
+    transform: none;
     background: #fff;
     border-bottom: 1px solid var(--color-border);
     max-height: 0;

@@ -2,22 +2,35 @@
    legibility, and a centered single-column text layout. */
 
 .hero-loop {
-  padding: 64px 0 96px;
+  min-height: 100vh;
+  margin-top: -77px;
+  padding: 141px 0 64px;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--color-black), var(--color-charcoal-light));
   color: #fff;
 }
 
+.hero-loop .hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+}
+
+.hero-loop .hero-lead {
+  max-width: 680px;
+}
+
 .hero-video-bg {
   position: absolute;
-  left: 0;
-  top: -60px;
+  inset: 0;
   width: 100%;
-  height: calc(100% + 120px);
+  height: 100%;
   object-fit: cover;
   z-index: 0;
-  transform: translateY(var(--pattern-offset, 0));
 }
 
 .hero-video-scrim {
@@ -30,11 +43,6 @@
     rgba(26, 26, 26, 0.75) 60%,
     rgba(26, 26, 26, 0.9) 100%
   );
-}
-
-.hero-loop .hero-inner {
-  position: relative;
-  z-index: 2;
 }
 
 .hero-loop p,
