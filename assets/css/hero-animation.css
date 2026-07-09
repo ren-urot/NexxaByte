@@ -54,33 +54,14 @@
   color: #fff;
 }
 
-/* Hero title: each line is clipped by its wrapper and slides up into view
-   on load, staggered slightly per line. */
-.hero-title .line-reveal {
+/* Hero title: each line is populated and "decoded" character-by-character
+   by JS (see hero-animation.js) on load. */
+.hero-title .line {
   display: block;
-  overflow: hidden;
 }
 
-.hero-title .line-inner {
-  display: block;
-  transform: translateY(110%);
-  animation: line-up 1300ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.hero-title .line-reveal:nth-child(1) .line-inner { animation-delay: 250ms; }
-.hero-title .line-reveal:nth-child(2) .line-inner { animation-delay: 480ms; }
-
-@keyframes line-up {
-  to {
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-title .line-inner {
-    animation: none;
-    transform: translateY(0);
-  }
+.hero-title .line:empty::before {
+  content: '\00a0';
 }
 
 @media (max-width: 860px) {
