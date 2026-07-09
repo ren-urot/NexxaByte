@@ -45,41 +45,33 @@
     }
 
     var glyphs = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ01#$%&*+=<>/\\';
-    var frameInterval = 40;
+    var frameInterval = 90;
+    var jumbleFrames = 16;
 
     function scrambleLine(line, startDelay) {
       var target = line.getAttribute('data-text');
-      var totalFrames = Math.round(target.length * 1.8) + 12;
       var frame = 0;
 
       setTimeout(function () {
         var timer = setInterval(function () {
-          var revealed = Math.floor((frame / totalFrames) * target.length);
-          var output = '';
-
-          for (var i = 0; i < target.length; i++) {
-            if (target.charAt(i) === ' ') {
-              output += ' ';
-            } else if (i < revealed) {
-              output += target.charAt(i);
-            } else {
-              output += glyphs.charAt(Math.floor(Math.random() * glyphs.length));
-            }
-          }
-
-          line.textContent = output;
-          frame++;
-
-          if (revealed >= target.length) {
+          if (frame >= jumbleFrames) {
             line.textContent = target;
             clearInterval(timer);
+            return;
           }
+
+          var output = '';
+          for (var i = 0; i < target.length; i++) {
+            output += target.charAt(i) === ' ' ? ' ' : glyphs.charAt(Math.floor(Math.random() * glyphs.length));
+          }
+          line.textContent = output;
+          frame++;
         }, frameInterval);
       }, startDelay);
     }
 
     for (var i = 0; i < lines.length; i++) {
-      scrambleLine(lines[i], i * 350 + 150);
+      scrambleLine(lines[i], i * 500 + 200);
     }
   }
 
