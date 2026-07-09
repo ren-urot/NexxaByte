@@ -88,7 +88,8 @@
 
   function initParallax() {
     var hosts = document.querySelectorAll('.parallax-hero, .section-shapes-host');
-    if (!hosts.length) return;
+    var heroVideo = document.querySelector('.hero-video-bg');
+    if (!hosts.length && !heroVideo) return;
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       return;
@@ -96,12 +97,22 @@
 
     var ticking = false;
 
+    function offsetFor(rect) {
+      return Math.max(-50, Math.min(50, rect.top * 0.1));
+    }
+
     function update() {
       for (var i = 0; i < hosts.length; i++) {
-        var rect = hosts[i].getBoundingClientRect();
-        var offset = rect.top * 0.1;
-        offset = Math.max(-50, Math.min(50, offset));
-        hosts[i].style.setProperty('--pattern-offset', offset + 'px');
+        hosts[i].style.setProperty('--pattern-offset', offsetFor(hosts[i].getBoundingClientRect()) + 'px');
+      }
+      if (heroVideo) {
+        // Measure the untransformed hero section, not the video itself —
+        // the video already carries this same transform, so measuring its
+        // own (post-transform) rect would feed back into itself each frame.
+        var heroSection = heroVideo.closest('.hero-loop');
+        if (heroSection) {
+          heroVideo.style.setProperty('--pattern-offset', offsetFor(heroSection.getBoundingClientRect()) + 'px');
+        }
       }
       ticking = false;
     }

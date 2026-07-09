@@ -11,11 +11,13 @@
 
 .hero-video-bg {
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: -60px;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 120px);
   object-fit: cover;
   z-index: 0;
+  transform: translateY(var(--pattern-offset, 0));
 }
 
 .hero-video-scrim {
