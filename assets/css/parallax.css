@@ -61,5 +61,5 @@
    structural class the section happens to carry. */
 .section-dark.section-shapes-host::before {
   opacity: 0.35;
-  background-position: calc(50% - 400px) center;
+  background-position: calc(50% - 700px) center;
 }
