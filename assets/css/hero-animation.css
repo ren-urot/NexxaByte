@@ -139,7 +139,7 @@
   0%, 8.9%, 100% { opacity: 0; }
   24.4%, 94.4% { opacity: 1; }
 }
-#btn-primary { animation: btn-in 9s infinite; animation-delay: -0.2s; }
+#btn-primary { animation: btn-in 9s infinite, accent-pulse 9s infinite; animation-delay: -0.2s, 0s; }
 #btn-secondary { animation: btn-in 9s infinite; animation-delay: -0.28s; }
 
 @keyframes chart-in {
@@ -155,7 +155,7 @@
 #bar-1 { transform-origin: 214px 296px; animation: bar-grow 9s infinite; animation-delay: -0.32s; }
 #bar-2 { transform-origin: 244px 296px; animation: bar-grow 9s infinite; animation-delay: -0.36s; }
 #bar-3 { transform-origin: 274px 296px; animation: bar-grow 9s infinite; animation-delay: -0.4s; }
-#bar-4 { transform-origin: 304px 296px; animation: bar-grow 9s infinite; animation-delay: -0.44s; }
+#bar-4 { transform-origin: 304px 296px; animation: bar-grow 9s infinite, accent-pulse 9s infinite; animation-delay: -0.44s, 0s; }
 
 /* UX flow phase (24.4% -> 40%) */
 @keyframes draw-path {
@@ -214,10 +214,48 @@
   52% { animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
   56%, 94.4% { opacity: 1; transform: scale(1); }
 }
-#badge { transform-origin: 430px 72px; animation: badge-pop 9s infinite; }
+#badge { transform-origin: 430px 72px; animation: badge-pop 9s infinite, accent-pulse 9s infinite; }
 
 @keyframes ghost-fade {
   0%, 46%, 57.8%, 100% { opacity: 0; }
   52% { opacity: 0.35; }
 }
 #ghost-card { animation: ghost-fade 9s infinite; }
+
+/* Brand expansion phase (57.8% -> 77.8%) */
+#ext-line-1, #ext-line-2 { animation-delay: -0.578s; } /* draws during 57.8%-77.8% window */
+
+@keyframes expand-out {
+  0%, 57.8%, 100% { opacity: 0; transform: scale(0.3); }
+  68% { animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); }
+  77.8%, 94.4% { opacity: 1; transform: scale(1); }
+}
+#mobile-device {
+  transform-box: view-box;
+  transform-origin: 280px 200px;
+  animation: expand-out 9s infinite;
+}
+#market-card {
+  transform-box: view-box;
+  transform-origin: 280px 200px;
+  animation: expand-out 9s infinite;
+  animation-delay: -0.1s;
+}
+
+@keyframes orbit-arc {
+  0%, 57.8%, 100% { opacity: 0; transform: rotate(0deg); }
+  70%, 94.4% { opacity: 1; }
+  75% { transform: rotate(-4deg); }
+  85% { transform: rotate(4deg); }
+  94.4% { transform: rotate(-2deg); }
+}
+#orbit-icons {
+  transform-box: view-box;
+  transform-origin: 280px 200px;
+  animation: orbit-arc 9s infinite;
+}
+
+@keyframes accent-pulse {
+  0%, 60%, 78%, 100% { filter: brightness(1); }
+  70% { filter: brightness(1.35); }
+}
