@@ -1,26 +1,39 @@
 (function () {
   'use strict';
 
-  function initPathDrawing() {
-    var paths = document.querySelectorAll('#hero-scene .draw-path');
-    for (var i = 0; i < paths.length; i++) {
-      var length = paths[i].getTotalLength();
-      paths[i].style.setProperty('--path-length', length);
-      paths[i].style.strokeDasharray = length;
-      paths[i].style.strokeDashoffset = length;
-    }
-  }
+  function initHeroVideo() {
+    var video = document.querySelector('.hero-video-bg');
+    if (!video) return;
 
-  function initReducedMotion() {
-    var visual = document.querySelector('.hero-visual');
-    if (!visual) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      visual.classList.add('reduced-motion');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var desktop = window.matchMedia('(min-width: 861px)');
+    var started = false;
+
+    function shouldPlay() {
+      return desktop.matches && !reducedMotion.matches;
     }
+
+    function sync() {
+      if (shouldPlay()) {
+        if (!started) {
+          video.load();
+          started = true;
+        }
+        video.play().catch(function () {
+          /* Autoplay can be blocked by the browser; the dark gradient
+             background and scrim already look correct without video. */
+        });
+      } else {
+        video.pause();
+      }
+    }
+
+    sync();
+    desktop.addEventListener('change', sync);
+    reducedMotion.addEventListener('change', sync);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
-    initPathDrawing();
-    initReducedMotion();
+    initHeroVideo();
   });
 })();
