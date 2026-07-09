@@ -98,3 +98,12 @@
     font-size: 2.1rem;
   }
 }
+
+@media (max-width: 340px) {
+  /* Narrow phones (e.g. 320px iPhone SE) still break the 3-line wrap at
+     2.1rem — drop the size further to keep "Transform Ideas Into" on
+     one line. */
+  .hero-title {
+    font-size: 1.7rem;
+  }
+}
