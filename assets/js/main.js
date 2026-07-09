@@ -118,26 +118,10 @@
     update();
   }
 
-  function initPatternEntrance() {
-    var hero = document.querySelector('.hero.parallax-hero');
-    if (!hero) return;
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return;
-    }
-
-    hero.classList.add('pattern-entrance');
-    hero.addEventListener('animationend', function handler() {
-      hero.classList.remove('pattern-entrance');
-      hero.removeEventListener('animationend', handler);
-    });
-  }
-
   document.addEventListener('DOMContentLoaded', function () {
     initNavToggle();
     initScrollReveal();
     initContactForm();
     initParallax();
-    initPatternEntrance();
   });
 })();
