@@ -271,3 +271,51 @@
   94.4% { opacity: 0.3; }
 }
 #glow { animation: glow-pulse 9s infinite; }
+
+/* Reduced motion support */
+.hero-visual.reduced-motion #hero-scene * {
+  animation: none !important;
+}
+
+.hero-visual.reduced-motion #decor-dots,
+.hero-visual.reduced-motion #browser-window,
+.hero-visual.reduced-motion #navbar,
+.hero-visual.reduced-motion #sidebar,
+.hero-visual.reduced-motion #card-1,
+.hero-visual.reduced-motion #card-2,
+.hero-visual.reduced-motion #icon-1,
+.hero-visual.reduced-motion #icon-2,
+.hero-visual.reduced-motion #btn-primary,
+.hero-visual.reduced-motion #btn-secondary,
+.hero-visual.reduced-motion #chart-card,
+.hero-visual.reduced-motion #bar-1,
+.hero-visual.reduced-motion #bar-2,
+.hero-visual.reduced-motion #bar-3,
+.hero-visual.reduced-motion #bar-4,
+.hero-visual.reduced-motion #node-1,
+.hero-visual.reduced-motion #node-2,
+.hero-visual.reduced-motion #node-3,
+.hero-visual.reduced-motion #float-icon,
+.hero-visual.reduced-motion #avatar-a,
+.hero-visual.reduced-motion #avatar-b,
+.hero-visual.reduced-motion #chat-bubble,
+.hero-visual.reduced-motion #badge,
+.hero-visual.reduced-motion #mobile-device,
+.hero-visual.reduced-motion #market-card,
+.hero-visual.reduced-motion #orbit-icons {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-visual.reduced-motion .draw-path {
+  stroke-dashoffset: 0;
+}
+
+.hero-visual.reduced-motion #travel-dot,
+.hero-visual.reduced-motion #ghost-card {
+  opacity: 0;
+}
+
+.hero-visual.reduced-motion #glow {
+  opacity: 0.3;
+}

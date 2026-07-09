@@ -11,7 +11,16 @@
     }
   }
 
+  function initReducedMotion() {
+    var visual = document.querySelector('.hero-visual');
+    if (!visual) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      visual.classList.add('reduced-motion');
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initPathDrawing();
+    initReducedMotion();
   });
 })();
