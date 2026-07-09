@@ -90,4 +90,11 @@
   .hero-video-scrim {
     display: none;
   }
+
+  /* Sized so the two phrases wrap to exactly 3 lines total, instead of
+     the awkward 4-line wrap ("Transform Ideas" / "Into" / "Scalable
+     Digital" / "Products") the default clamp() produces here. */
+  .hero-title {
+    font-size: 2.1rem;
+  }
 }

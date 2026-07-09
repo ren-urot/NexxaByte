@@ -287,6 +287,22 @@
 @media (max-width: 768px) {
   .footer-inner {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bottom {
+    text-align: center;
   }
 }
 
