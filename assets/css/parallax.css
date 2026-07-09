@@ -60,7 +60,7 @@
    .parallax-hero — opacity here is about background luminance, not which
    structural class the section happens to carry. */
 .section-dark.section-shapes-host::before {
-  opacity: 0.35;
+  opacity: 0.5;
   background-position: calc(50% - 700px) center;
 }
 
@@ -76,6 +76,6 @@
   background-repeat: no-repeat;
   background-position: calc(50% - 700px) center;
   background-size: cover;
-  opacity: 0.35;
+  opacity: 0.5;
   transform: scaleX(-1) scaleY(-1);
 }

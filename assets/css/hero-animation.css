@@ -64,11 +64,11 @@
 .hero-title .line-inner {
   display: block;
   transform: translateY(110%);
-  animation: line-up 800ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: line-up 1300ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.hero-title .line-reveal:nth-child(1) .line-inner { animation-delay: 150ms; }
-.hero-title .line-reveal:nth-child(2) .line-inner { animation-delay: 280ms; }
+.hero-title .line-reveal:nth-child(1) .line-inner { animation-delay: 250ms; }
+.hero-title .line-reveal:nth-child(2) .line-inner { animation-delay: 480ms; }
 
 @keyframes line-up {
   to {
