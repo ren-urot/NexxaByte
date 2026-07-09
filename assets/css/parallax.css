@@ -63,3 +63,19 @@
   opacity: 0.35;
   background-position: calc(50% - 700px) center;
 }
+
+/* Mirrored copy of the same pattern, flipped to balance the right side
+   since the left-shifted copy above leaves it empty. */
+.section-dark.section-shapes-host::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: url('../images/pattern.svg');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 700px) center;
+  background-size: cover;
+  opacity: 0.35;
+  transform: scaleX(-1);
+}
