@@ -1,5 +1,10 @@
 # Homepage Hero: Brand Storytelling Loop Animation
 
+> **Superseded:** after this was fully implemented and reviewed, the hero was
+> redirected to a full-bleed background video instead (see the "Replace hero
+> SVG illustration with full-bleed background video" commit). Kept here as a
+> record of the approach that was tried first.
+
 ## Overview
 
 Replace the current static `pattern.svg` texture behind the homepage hero with a

@@ -1,5 +1,11 @@
 # Homepage Hero Loop Animation Implementation Plan
 
+> **Superseded:** all 8 tasks below were implemented and individually
+> reviewed, but after a live design review the hero was redirected to a
+> full-bleed background video instead (see the "Replace hero SVG
+> illustration with full-bleed background video" commit). Kept here as a
+> record of the approach that was tried first.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Replace the homepage hero's static `pattern.svg` background texture with a hand-coded, full-color, seamlessly-looping (9s) inline SVG animation depicting an empty workspace becoming a built interface, gaining UX-flow connections, collaboration touches, and brand expansion, then settling and resetting.
