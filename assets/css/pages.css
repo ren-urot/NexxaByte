@@ -217,44 +217,8 @@
 }
 
 .project-thumb {
-  position: relative;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-thumb-1 {
-  background: linear-gradient(135deg, var(--color-black), var(--color-charcoal-light));
-}
-
-.project-thumb-2 {
-  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
-}
-
-.project-thumb-3 {
-  background: linear-gradient(135deg, var(--color-charcoal-light), var(--color-dark));
-}
-
-.project-tag {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(6px);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.project-monogram {
-  font-family: var(--font-heading);
-  font-size: 2.75rem;
-  color: rgba(255, 255, 255, 0.85);
+  aspect-ratio: 4 / 3;
+  background: var(--color-black);
 }
 
 .project-body {
