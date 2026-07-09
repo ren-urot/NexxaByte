@@ -59,7 +59,7 @@
    links move into an always-white dropdown panel (see the mobile nav
    rules further down), so they must stay dark regardless of scroll. */
 @media (min-width: 861px) {
-  .site-header:not(.is-scrolled) .main-nav a {
+  .site-header:not(.is-scrolled) .main-nav a:not(.active):not(:hover) {
     color: #fff;
   }
 }
