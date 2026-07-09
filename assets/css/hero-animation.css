@@ -308,7 +308,7 @@
 }
 
 .hero-visual.reduced-motion .draw-path {
-  stroke-dashoffset: 0;
+  stroke-dashoffset: 0 !important;
 }
 
 .hero-visual.reduced-motion #travel-dot,
