@@ -143,7 +143,7 @@
   justify-content: center;
   gap: 8px;
   padding: 14px 28px;
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
   border: 2px solid transparent;
