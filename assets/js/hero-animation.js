@@ -14,7 +14,6 @@
           video.load();
           started = true;
         }
-        video.playbackRate = 0.25;
         video.play().catch(function () {
           /* Autoplay can be blocked by the browser; the dark gradient
              background and scrim already look correct without video. */
@@ -23,10 +22,6 @@
         video.pause();
       }
     }
-
-    video.addEventListener('loadedmetadata', function () {
-      video.playbackRate = 0.25;
-    });
 
     sync();
     desktop.addEventListener('change', sync);
