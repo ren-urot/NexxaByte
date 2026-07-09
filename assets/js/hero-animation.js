@@ -5,16 +5,11 @@
     var video = document.querySelector('.hero-video-bg');
     if (!video) return;
 
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     var desktop = window.matchMedia('(min-width: 861px)');
     var started = false;
 
-    function shouldPlay() {
-      return desktop.matches && !reducedMotion.matches;
-    }
-
     function sync() {
-      if (shouldPlay()) {
+      if (desktop.matches) {
         if (!started) {
           video.load();
           started = true;
@@ -30,7 +25,6 @@
 
     sync();
     desktop.addEventListener('change', sync);
-    reducedMotion.addEventListener('change', sync);
   }
 
   document.addEventListener('DOMContentLoaded', function () {
