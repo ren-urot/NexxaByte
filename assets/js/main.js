@@ -66,6 +66,19 @@
     var status = document.getElementById('form-status');
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    var sentParam = new URLSearchParams(window.location.search).get('sent');
+    if (sentParam === '1') {
+      status.textContent = 'Thanks! Your message has been sent — we\'ll be in touch soon.';
+      status.className = 'form-status success';
+      form.reset();
+    } else if (sentParam === '0') {
+      status.textContent = 'Something went wrong sending your message. Please try again or email us directly.';
+      status.className = 'form-status error';
+    }
+    if (sentParam !== null) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+
     function setError(group, hasError) {
       group.classList.toggle('has-error', hasError);
     }
