@@ -222,6 +222,14 @@
 .project-thumb {
   aspect-ratio: 4 / 3;
   background: var(--color-black);
+  overflow: hidden;
+}
+
+.project-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .project-body {
