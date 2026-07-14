@@ -118,10 +118,7 @@
     if (!scroller || !prevBtn || !nextBtn) return;
 
     function step() {
-      var card = scroller.querySelector('.project-card');
-      if (!card) return scroller.clientWidth;
-      var gap = parseFloat(getComputedStyle(scroller).columnGap || 0) || 0;
-      return card.getBoundingClientRect().width + gap;
+      return scroller.clientWidth;
     }
 
     function updateButtons() {
