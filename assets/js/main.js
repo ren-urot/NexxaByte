@@ -111,10 +111,41 @@
     });
   }
 
+  function initProjectCarousel() {
+    var scroller = document.getElementById('project-scroller');
+    var prevBtn = document.getElementById('project-prev');
+    var nextBtn = document.getElementById('project-next');
+    if (!scroller || !prevBtn || !nextBtn) return;
+
+    function step() {
+      var card = scroller.querySelector('.project-card');
+      if (!card) return scroller.clientWidth;
+      var gap = parseFloat(getComputedStyle(scroller).columnGap || 0) || 0;
+      return card.getBoundingClientRect().width + gap;
+    }
+
+    function updateButtons() {
+      var maxScroll = scroller.scrollWidth - scroller.clientWidth;
+      prevBtn.disabled = scroller.scrollLeft <= 4;
+      nextBtn.disabled = scroller.scrollLeft >= maxScroll - 4;
+    }
+
+    prevBtn.addEventListener('click', function () {
+      scroller.scrollBy({ left: -step(), behavior: 'smooth' });
+    });
+    nextBtn.addEventListener('click', function () {
+      scroller.scrollBy({ left: step(), behavior: 'smooth' });
+    });
+    scroller.addEventListener('scroll', updateButtons, { passive: true });
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initNavToggle();
     initHeaderScroll();
     initScrollReveal();
     initContactForm();
+    initProjectCarousel();
   });
 })();

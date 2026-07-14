@@ -123,33 +123,53 @@
           <h2>Projects We're Proud Of</h2>
           <p class="text-muted">A look at some of the products we've helped design, build, and scale.</p>
         </div>
-        <div class="grid grid-2">
-          <a href="https://cpd-landing-page.vercel.app" target="_blank" rel="noopener" class="project-card reveal">
-            <div class="project-thumb">
-              <img src="assets/images/projects/cpdcheck.jpg" alt="CPDcheck product screenshot" loading="lazy">
+        <div class="project-carousel-wrap">
+          <button type="button" class="project-nav prev" id="project-prev" aria-label="Previous projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="project-scroller" id="project-scroller">
+            <a href="https://cpd-landing-page.vercel.app" target="_blank" rel="noopener" class="project-card reveal">
+              <div class="project-thumb">
+                <img src="assets/images/projects/cpdcheck.jpg" alt="CPDcheck product screenshot" loading="lazy">
+              </div>
+              <div class="project-body">
+                <h3>CPDcheck</h3>
+                <p class="text-muted">An AI-powered CPD compliance platform helping financial licensees and product providers turn adviser engagement into accredited, auditable learning.</p>
+                <ul class="project-stack">
+                  <li>Next.js</li>
+                  <li>Tailwind CSS</li>
+                  <li>Vercel</li>
+                </ul>
+              </div>
+            </a>
+            <a href="https://connctly.com/" target="_blank" rel="noopener" class="project-card reveal">
+              <div class="project-thumb">
+                <img src="assets/images/projects/connctly.jpg" alt="Connctly product screenshot" loading="lazy">
+              </div>
+              <div class="project-body">
+                <h3>Connctly</h3>
+                <p class="text-muted">A community super-app bringing feeds, jobs and talent, a marketplace, videos, and games together in one place.</p>
+                <ul class="project-stack">
+                  <li>Next.js</li>
+                </ul>
+              </div>
+            </a>
+            <div class="project-card project-card-blank reveal">
+              <div class="project-thumb"></div>
+              <div class="project-body">
+                <p class="text-muted">Coming soon</p>
+              </div>
             </div>
-            <div class="project-body">
-              <h3>CPDcheck</h3>
-              <p class="text-muted">An AI-powered CPD compliance platform helping financial licensees and product providers turn adviser engagement into accredited, auditable learning.</p>
-              <ul class="project-stack">
-                <li>Next.js</li>
-                <li>Tailwind CSS</li>
-                <li>Vercel</li>
-              </ul>
+            <div class="project-card project-card-blank reveal">
+              <div class="project-thumb"></div>
+              <div class="project-body">
+                <p class="text-muted">Coming soon</p>
+              </div>
             </div>
-          </a>
-          <article class="project-card reveal">
-            <div class="project-thumb"></div>
-            <div class="project-body">
-              <h3>MedConnect</h3>
-              <p class="text-muted">A telehealth app that connects patients with providers for secure virtual visits and follow-ups.</p>
-              <ul class="project-stack">
-                <li>React Native</li>
-                <li>Firebase</li>
-                <li>Twilio</li>
-              </ul>
-            </div>
-          </article>
+          </div>
+          <button type="button" class="project-nav next" id="project-next" aria-label="Next projects">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
         </div>
       </div>
     </section>
