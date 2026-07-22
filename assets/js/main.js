@@ -68,7 +68,7 @@
 
     var sentParam = new URLSearchParams(window.location.search).get('sent');
     if (sentParam === '1') {
-      status.textContent = 'Thanks! Your message has been sent — we\'ll be in touch soon.';
+      status.textContent = 'Thanks! Your message has been sent. We\'ll be in touch soon.';
       status.className = 'form-status success';
       form.reset();
     } else if (sentParam === '0') {
