@@ -32,7 +32,7 @@ $body .= "Message:\n$message\n";
 
 $headers  = "From: Nexxabyte Website <no-reply@nexxabyte.com>\r\n";
 $headers .= "Reply-To: $name <$email>\r\n";
-$headers .= "Cc: inquiry@nexxabyte.com\r\n";
+$headers .= "Cc: inquiry@nexxabyte.com, ren@nexxabyte.com\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
 $sent = mail($to, $subject, $body, $headers);
